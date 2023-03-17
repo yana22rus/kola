@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST">
+    <input type="text" placeholder="Имя" name="first_name">
+    <textarea name="text" placeholder="Текст"></textarea>
+    <input type="date" name="date">
+    <input type="submit" value="Сохранить" name="submit">
+</form>
+
+
+<form method="POST">
+    {%for x in lst_data%}
+    <input type="text" hidden name="id" value="{{x[0]}}">
+    {{x[0]}} {{x[1]}} {{x[2]}}<input type="submit" value="Удалить" name="submit"><br>
+    {% endfor %}
+</form>
+</body>
+</html>
